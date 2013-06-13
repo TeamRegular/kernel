@@ -84,4 +84,18 @@ config TEGRA_AHB
 config TEGRA_EMC_SCALING_ENABLE
 	bool "Enable scaling the memory frequency"
 
+config TEGRA_TRUSTED_FOUNDATIONS
+	bool "Trusted Foundations secure monitor support"
+	help
+	  Many Tegra devices are booted with the Trusted Foundations secure
+	  monitor active, requiring some core operations to be performed by
+	  the secure monitor instead of the kernel.
+
+	  This option allows the kernel to invoke the secure monitor when
+	  required on devices using Trusted Foundations.
+
+	  Devices using Trusted Foundations should pass a device tree containing
+	  a node compatible with "tl,trusted-foundations" to signal the presence
+	  of the secure monitor.
+
 endmenu

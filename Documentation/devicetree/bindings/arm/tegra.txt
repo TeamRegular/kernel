@@ -32,3 +32,15 @@ board-specific compatible values:
   nvidia,whistler
   toradex,colibri_t20-512
   toradex,iris
+
+Optional nodes
+-------------------------------------------
+
+Trusted Foundations:
+Boards using the Trusted Foundations secure monitor should signal its
+presence by declaring a node compatible with "tl,trusted-foundations"
+(the name and location of the node does not matter).
+
+	firmware {
+		compatible = "tl,trusted-foundations";
+	};

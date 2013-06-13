@@ -12,6 +12,7 @@ obj-y					+= pm.o
 obj-y					+= reset.o
 obj-y					+= reset-handler.o
 obj-y					+= sleep.o
+obj-y					+= firmware.o
 obj-y					+= tegra.o
 obj-$(CONFIG_CPU_IDLE)			+= cpuidle.o
 obj-$(CONFIG_ARCH_TEGRA_2x_SOC)		+= tegra20_speedo.o
@@ -38,3 +39,5 @@ endif
 obj-$(CONFIG_ARCH_TEGRA_2x_SOC)		+= board-harmony-pcie.o
 
 obj-$(CONFIG_ARCH_TEGRA_2x_SOC)		+= board-paz00.o
+
+obj-$(CONFIG_TEGRA_TRUSTED_FOUNDATIONS)	+= trusted_foundations.o

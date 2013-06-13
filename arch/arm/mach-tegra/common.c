@@ -39,6 +39,7 @@
 #include "sleep.h"
 #include "pm.h"
 #include "reset.h"
+#include "firmware.h"
 
 /*
  * Storage for debug-macro.S's state.
@@ -99,6 +100,7 @@ static void __init tegra_init_cache(void)
 
 void __init tegra_init_early(void)
 {
+	tegra_init_firmware();
 	tegra_cpu_reset_handler_init();
 	tegra_apb_io_init();
 	tegra_init_fuse();
