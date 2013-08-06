@@ -12,10 +12,6 @@ What's (not yet) supported
 --------------------------
 Display: currently uses simplefb. tegra-drm support should appear in the future.
 
-USB: not working yet - should come soon.
-
-Joystick: requires USB.
-
 Wifi: not working yet.
 
 All the rest should be working as expected. You can access eMMC and SD.
